@@ -1,16 +1,62 @@
-# React + Vite
+# 🚀 Odd/Even Game (Frontend)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Đây là code frontend cho dự án game Odd/Even (Chẵn/Lẻ) 5x5, được xây dựng bằng React, Vite và Tailwind CSS.
 
-Currently, two official plugins are available:
+Trò chơi này là một game multiplayer (2 người) real-time. Người chơi có thể tạo phòng hoặc tham gia phòng bằng ID. Cả hai người chơi cùng bấm vào các ô trên bàn cờ 5x5 để tăng giá trị của ô. Người đầu tiên tạo được một hàng (ngang, dọc, hoặc chéo) gồm 5 ô có giá trị đều là số lẻ (ODD) hoặc 5 ô đều là số chẵn (EVEN và khác 0) sẽ chiến thắng.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🔗 Link Demo Trực Tiếp
 
-## React Compiler
+* **Frontend (Game):** `https://odd-even-frontend.vercel.app/`
+* **Backend (Server):** `https://odd-even-server.onrender.com`
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+---
 
-## Expanding the ESLint configuration
+## 📦 Backend Repository (Quan trọng)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Phần backend của dự án này (dùng để xử lý WebSocket, quản lý phòng và logic game) nằm trong một kho lưu trữ riêng.
+
+* **Link tới GitHub Backend:** [https://github.com/thang7112001/odd-even-server]
+---
+
+## 🛠️ Công Nghệ Sử Dụng
+
+* **Frontend:** React (Vite), Tailwind CSS
+* **Backend:** Node.js, WebSocket (`ws`)
+* **Deployment:** Vercel (Frontend), Render (Backend)
+
+---
+
+## 🏃 Hướng Dẫn Chạy Local
+
+Để chạy dự án này local, bạn cần khởi động **cả hai** server (backend và frontend).
+
+### 1. Chạy Backend (Server) 
+
+
+# 1. Clone kho lưu trữ backend
+git clone [https://github.com/thang7112001/odd-even-server.git]
+cd odd-even-server
+
+# 2. Cài đặt các gói phụ thuộc
+npm install
+
+# 3. Khởi động server
+node server.js
+
+# Server sẽ chạy tại: ws://localhost:8084 
+
+Trong file Game.jsx line 26 đổi địa chỉ thành ' ws://localhost:8084 ' để chạy local 
+
+### 2. Chạy front-end 
+
+# 1. Clone kho lưu trữ frontend này
+git clone [https://github.com/thang7112001/odd-even-frontend.git](https://github.com/thang7112001/odd-even-frontend.git)
+cd odd-even-frontend
+
+# 2. Cài đặt các gói phụ thuộc
+npm install
+
+# 3. Khởi động app
+npm run dev
+
+# App sẽ chạy tại: http://localhost:5173
