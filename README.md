@@ -8,7 +8,7 @@ Trò chơi này là một game multiplayer (2 người) real-time. Người chơ
 
 * **Frontend (Game):** `https://odd-even-frontend.vercel.app/`
 * **Backend (Server):** `https://odd-even-server.onrender.com`
-
+mở link Backend và đợi vài phút để server khởi động lại 
 ---
 
 ## 📦 Backend Repository (Quan trọng)
