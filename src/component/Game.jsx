@@ -23,7 +23,7 @@ export default function Game() {
   useEffect(() => {
     // Chỉ kết nối khi wsRef chưa được tạo
     if (!wsRef.current) {
-      const ws = new WebSocket('ws://localhost:8084')
+      const ws = new WebSocket('wss://odd-even-server.onrender.com')
       wsRef.current = ws;
 
       ws.onopen = () => {
